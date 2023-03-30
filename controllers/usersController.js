@@ -24,7 +24,7 @@ export const addNewUser = async (req, res) => {
 				userId: user._id,
 			});
 			await image.save();
-			user.profileImage = `http://localhost:4000/images/${image.filename}`;
+			user.profileImage = `https://e-commerce-dci.onrender.com/#/images/${image.filename}`;
 		}
 		// hashing user password
 		const hashedPassword = bcrypt.hashSync(user.password, 10);
